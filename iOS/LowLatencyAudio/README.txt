@@ -1,3 +1,11 @@
+# UPDATED
+
+This plugin has been updated to support the new PhoneGap 3.0 CLI.  The latest version is available here: [https://github.com/triceam/LowLatencyAudio](https://github.com/triceam/LowLatencyAudio)
+This old version will remain for historical purposes.
+
+## OLD:
+
+
 LowLatencyAudio plugin for PhoneGap/Apache Cordova
 Developed by Andrew Trice - http://tricedesigns.com
 
