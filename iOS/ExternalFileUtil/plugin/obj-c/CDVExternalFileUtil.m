@@ -27,7 +27,7 @@
     NSString* callbackID = [arguments pop];
     [callbackID retain];
     
-    NSString *path = [arguments objectAtIndex:0]; 
+    NSString *path = [[arguments objectAtIndex:0] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; 
     [path retain];
     
     NSString *uti = [arguments objectAtIndex:1]; 
@@ -36,7 +36,7 @@
     //NSLog(@"path %@, uti:%@", path, uti);
     
     NSArray *parts = [path componentsSeparatedByString:@"/"];
-    NSString *previewDocumentFileName = [parts lastObject];
+    NSString *previewDocumentFileName = [[parts lastObject] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     //NSLog(@"The file name is %@", previewDocumentFileName);
     
     NSData *fileRemote = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:path]];
